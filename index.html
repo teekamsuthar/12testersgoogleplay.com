@@ -114,32 +114,20 @@
     <section id="pricing" class="pricing">
       <div class="container">
         <h2>Pricing & Checkout</h2>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3>Standard Package</h3>
-            <p>
-              20 Testers for 14 Days<br />Detailed Feedback<br />Google
-              Compliance Support
-            </p>
-            <p class="price">$299</p>
-            <div
-              class="paypal-checkout"
-              id="paypal-button-container-standard"
-            ></div>
-          </div>
-
-          <div class="pricing-card">
-            <h3>Premium Package</h3>
-            <p>
-              20 Testers for 14 Days<br />Detailed Feedback<br />Priority
-              Support & Extended Guidance
-            </p>
-            <p class="price">$399</p>
-            <div
-              class="paypal-checkout"
-              id="paypal-button-container-premium"
-            ></div>
-          </div>
+        <p>
+          Ready to get started? Use our seamless PayPal checkout option below to
+          fast-track your app approval.
+        </p>
+        <div class="paypal-container">
+          <script src="https://www.paypal.com/sdk/js?client-id=BAAiKjt70RFPV9iA95Bxs4aofEqO_0IzVktjovDkwahHDSWoNsEk_Ec5tcvsseFGJvKxH5zUIagnRDL3mA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+          <div id="paypal-container-9NMX2XWW9SN6J"></div>
+          <script>
+            paypal
+              .HostedButtons({
+                hostedButtonId: "9NMX2XWW9SN6J",
+              })
+              .render("#paypal-container-9NMX2XWW9SN6J");
+          </script>
         </div>
       </div>
     </section>
@@ -147,42 +135,5 @@
     <footer class="footer">
       <p>© 2024 TestersHub. All rights reserved.</p>
     </footer>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAiKjt70RFPV9iA95Bxs4aofEqO_0IzVktjovDkwahHDSWoNsEk_Ec5tcvsseFGJvKxH5zUIagnRDL3mA&currency=USD"></script>
-    <script>
-      paypal
-        .Buttons({
-          createOrder: function (data, actions) {
-            return actions.order.create({
-              purchase_units: [{ amount: { value: "299" } }],
-            });
-          },
-          onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-              alert(
-                "Transaction completed by " + details.payer.name.given_name
-              );
-            });
-          },
-        })
-        .render("#paypal-button-container-standard");
-
-      paypal
-        .Buttons({
-          createOrder: function (data, actions) {
-            return actions.order.create({
-              purchase_units: [{ amount: { value: "399" } }],
-            });
-          },
-          onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-              alert(
-                "Transaction completed by " + details.payer.name.given_name
-              );
-            });
-          },
-        })
-        .render("#paypal-button-container-premium");
-    </script>
   </body>
 </html>

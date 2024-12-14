@@ -24,6 +24,17 @@
       #paypal-container-9NMX2XWW9SN6J {
         text-align: center;
       }
+
+      .hero {
+        background: url("images/banner.webp") center/cover no-repeat;
+        color: #fff;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+      }
     </style>
   </head>
   <body>
@@ -39,11 +50,14 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section
+      class="hero"
+      style="background: url('images/banner.webp') center/cover no-repeat"
+    >
       <div class="hero-content">
         <h1>Fast-Track Your App Approval with TestersHub</h1>
         <p>
-          Struggling to meet Google's 20-tester requirement? TestersHub provides
+          Struggling to meet Google's 12-tester requirement? TestersHub provides
           a seamless and professional service to ensure your app gets approved
           on the first try.
         </p>
@@ -166,10 +180,10 @@
     <section id="pricing" class="pricing">
       <div class="container">
         <h2>Pricing & Checkout</h2>
-        <p>
+        <!-- <p>
           Ready to get started? Use our seamless PayPal checkout option below to
           fast-track your app approval.
-        </p>
+        </p> -->
         <div class="paypal-container">
           <script src="https://www.paypal.com/sdk/js?client-id=BAAiKjt70RFPV9iA95Bxs4aofEqO_0IzVktjovDkwahHDSWoNsEk_Ec5tcvsseFGJvKxH5zUIagnRDL3mA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
           <div id="paypal-container-9NMX2XWW9SN6J"></div>

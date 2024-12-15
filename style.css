@@ -1,5 +1,5 @@
 body {
-  font-family: "San Francisco", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   color: #333;
   background: #f9f9f9;
@@ -19,6 +19,10 @@ body {
   background: #fff;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -33,80 +37,17 @@ body {
   font-weight: bold;
 }
 
+.nav-links a.active {
+  color: #f57c00;
+  border-bottom: 2px solid #f57c00;
+}
+
 .logo {
   color: #f57c00;
   font-weight: bold;
 }
 
 /* Hero Section */
-/* .hero {
-  background: url("images/banner.jpg") no-repeat center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60vh;
-} */
-
-.hero .left {
-  max-width: 600px;
-}
-
-.hero .right img {
-  max-width: 100%;
-}
-
-/* Steps and Testimonials */
-.steps-grid,
-.testimonials-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.step,
-.testimonial {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-.footer {
-  background: #333;
-  color: #fff;
-  padding: 2rem 1rem;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-left,
-.footer-right {
-  flex: 1;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.paypal-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-#paypal-container-9NMX2XWW9SN6J {
-  text-align: center;
-}
-
 .hero {
   position: relative;
   background: url("images/banner.jpg") center/cover no-repeat;
@@ -126,71 +67,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensures content sits above the overlay */
+  z-index: 2;
 }
 
-.testimonials {
-  padding: 4rem 0;
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
 }
 
-.testimonials h2 {
-  text-align: center;
+.hero p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-  text-align: left;
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-
-.testimonial-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.testimonial-info img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-info strong {
-  display: block;
-  font-size: 1rem;
-  color: #333;
-}
-
-.testimonial-info span {
-  font-size: 0.875rem;
-  color: #777;
-}
-
+/* Button Styles */
 .btn {
   background: linear-gradient(90deg, #f57c00, #ff9800);
   color: #fff;
@@ -209,18 +106,193 @@ body {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Steps Section */
+.steps {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #4a90e2;
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .card-icon {
+  color: #1e73be;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Testimonials Section */
+.testimonials {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.testimonials h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.card-footer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.testimonial-info img:hover {
+  transform: scale(1.1); /* Slightly enlarges the image */
+  transition: transform 0.3s ease; /* Smooth transition */
+  border-color: #f57c00; /* Highlights the border on hover */
+}
+
+.testimonial-info img {
+  width: 50px; /* Adjust the size to your preference */
+  height: 50px; /* Maintain the aspect ratio with equal width and height */
+  border-radius: 50%; /* Keeps the images circular */
+  object-fit: cover; /* Ensures the image fits well inside the circle */
+  border: 2px solid #ddd; /* Adds a subtle border for a clean look */
+  flex-shrink: 0; /* Prevents the image from shrinking if there's not enough space */
+}
+
+.testimonial-info strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.testimonial-info span {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  position: relative;
 }
 
 .footer a::after {
   content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
+  display: block;
   width: 0;
   height: 2px;
   background: #fff;
@@ -229,4 +301,20 @@ body {
 
 .footer a:hover::after {
   width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.paypal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#paypal-container-9NMX2XWW9SN6J {
+  text-align: center;
 }

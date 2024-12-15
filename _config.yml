@@ -30,7 +30,15 @@
 title: TestersHub Blog
 description: Insights and tips on app testing and compliance.
 baseurl: "/12testersgoogleplay.com" # Leave blank if hosted at the root of your GitHub Pages site.
+# baseurl: "" # Leave blank if hosted at the root of your GitHub Pages site.
 url: "https://12testersgoogleplay.com"
+
+# Local environment overrides
+defaults:
+  - scope:
+      path: ""
+    values:
+      baseurl: "" # Empty baseurl for local testing
 
 twitter_username: jekyllrb
 github_username: jekyll

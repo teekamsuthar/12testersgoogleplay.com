@@ -29,7 +29,7 @@
 
 title: TestersHub Blog
 description: Insights and tips on app testing and compliance.
-baseurl: "/12testersgoogleplay.com" # Leave blank if hosted at the root of your GitHub Pages site.
+baseurl: "/12testersgoogleplay.com/" # Leave blank if hosted at the root of your GitHub Pages site.
 # baseurl: "" # Leave blank if hosted at the root of your GitHub Pages site.
 url: "https://12testersgoogleplay.com"
 

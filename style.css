@@ -12,6 +12,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +35,6 @@ body {
   font-weight: 800;
   font-size: 1.5rem;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .nav-links {
@@ -130,14 +130,6 @@ body {
   text-align: center;
   padding: 2em 0;
 }
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -229,9 +221,6 @@ body {
 
 .testimonials h2 {
   margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
-
   font-size: 26px;
   color: #f47d02;
   text-align: center;
@@ -250,26 +239,17 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
+
 .testimonial p {
   font-style: italic;
   margin-bottom: 1.5rem;
   color: #555;
 }
+
 .testimonial-info {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.card-footer {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1rem;
-  background-color: #fff;
-}
-
-.card-footer img {
-  flex-direction: column; 
+  flex-direction: column;
+ 
 }
 .card-header {
   display: flex;
@@ -303,7 +283,6 @@ body {
 
 .testimonial-info strong {
   font-size: 1rem;
-  color: #333;
   color: #f47d02;
 }
 
@@ -311,43 +290,6 @@ body {
   font-size: 0.875rem;
   color: #777;
 }
-
-/* Footer */
-.footer {
-  background: #333;
-  color: #fff;
-  padding: 2rem 1rem;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 0.3s ease;
-}
-
-.footer a:hover::after {
-  width: 100%;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 
 /* Footer Styles */
 .footer {
@@ -453,13 +395,19 @@ body {
     margin-top: 0;
   }
 }
+
+#paypal-container-9NMX2XWW9SN6J {
+  text-align: center;
+}
 /* extra css add my chinmaypaliwal */
 .container{
   padding: 60px 100px;
+
 }
 .pricing {
   display: flex;
   justify-content: space-between;
+  width: 100%; 
 }
 
 .pricing h2 {
@@ -470,7 +418,7 @@ body {
 }
 .paypal-left-content {
   padding: 0px 70px 0 0;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 #desc-label{
@@ -535,12 +483,12 @@ section#about {
 .htmega-counter-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #f47d06;
+  color: #007bff;
 }
 
 .htmega-suffix {
   font-size: 1.2rem;
-  color: #f47d06;
+  color: #555;
 }
 
 .htmega-counter-title {
@@ -553,11 +501,11 @@ section#about {
   font-size: 16px;
   padding: 10px 40px 10px 10px;
   background-color: transparent;
-  color: #f47d06;
+  color: blueviolet;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: 1px solid #f47d06;
+  border: 1px solid blueviolet;
 }
 .primary-btn::after {
   content: "";
@@ -588,6 +536,7 @@ section#about {
 .image-left-arrow img {
   width: 220px;
   rotate: 180deg;
+  /* margin-top: 150px; */
 }
 
 .steps-grid {
@@ -608,7 +557,9 @@ section#about {
   height: 50px;
   rotate: 90deg;
 }
-
+/* .margin-card{
+  margin-top: 150px;
+} */
 .content-section h2 {
   font-size: 26px;
   color: #f47d02;

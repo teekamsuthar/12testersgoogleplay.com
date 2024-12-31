@@ -12,7 +12,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +34,7 @@ body {
   font-weight: 800;
   font-size: 1.5rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -138,6 +138,13 @@ body {
   margin-top: 2rem;
 }
 
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin: 2rem auto;
+}
 .card {
   background: #fff;
   border-radius: 15px;
@@ -224,6 +231,10 @@ body {
   margin-bottom: 2rem;
   font-size: 2rem;
   color: #333;
+
+  font-size: 26px;
+  color: #f47d02;
+  text-align: center;
 }
 
 .testimonials-grid {
@@ -239,13 +250,11 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
-
 .testimonial p {
   font-style: italic;
   margin-bottom: 1.5rem;
   color: #555;
 }
-
 .testimonial-info {
   display: flex;
   align-items: center;
@@ -260,6 +269,17 @@ body {
 }
 
 .card-footer img {
+  flex-direction: column; 
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 0;
+  background-color: #fff;
+}
+
+.card-header img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -284,6 +304,7 @@ body {
 .testimonial-info strong {
   font-size: 1rem;
   color: #333;
+  color: #f47d02;
 }
 
 .testimonial-info span {
@@ -327,13 +348,274 @@ body {
   margin-top: 1rem;
 }
 
-.paypal-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+
+/* Footer Styles */
+.footer {
+  background-color: #1e293b; /* Slate-900 */
+  color: #cbd5e1; /* Slate-300 */
 }
 
-#paypal-container-9NMX2XWW9SN6J {
-  text-align: center;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  border-bottom: 1px solid #374151; /* Slate-700 */
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-us h4,
+.quick-links h4,
+.contact h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e2e8f0; /* Slate-200 */
+  margin-bottom: 16px;
+}
+
+.about-us p,
+.quick-links ul,
+.contact ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 8px;
+}
+
+.quick-links ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+  color: #f47d02; /* Teal-300 */
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 32px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f47d02; /* Teal-300 */
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+  .footer-links {
+    margin-top: 0;
+  }
+}
+/* extra css add my chinmaypaliwal */
+.container{
+  padding: 60px 100px;
+}
+.pricing {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing h2 {
+  margin-bottom: 2rem;
+  font-size: 26px;
+  color: #f47d02;
+  margin-top: 0;
+}
+.paypal-left-content {
+  padding: 0px 70px 0 0;
+  max-width: 600px;
+}
+
+#desc-label{
+  display: none !important;
+
+}
+#price-label{
+  display: none !important;
+}
+
+.counter {
+  display: flex;
+  font-size: 40px;
+  line-height: 0px;
+  color: blueviolet;
+}
+h2.htmega-counter-title {
+  margin-top: 0;
+}
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+section#about {
+  display: flex;
+  justify-content: space-between;
+}
+.content-section {
+  max-width: 700px;
+} 
+.htmega-counter-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 180px;
+}
+
+.htmega-counter-content:hover {
+  transform: translateY(-5px);
+}
+
+.htmega-counter-content img {
+  margin-bottom: 10px;
+}
+
+.counter {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.htmega-counter-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f47d06;
+}
+
+.htmega-suffix {
+  font-size: 1.2rem;
+  color: #f47d06;
+}
+
+.htmega-counter-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 10px;
+}
+.primary-btn {
+  position: relative;
+  font-size: 16px;
+  padding: 10px 40px 10px 10px;
+  background-color: transparent;
+  color: #f47d06;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid #f47d06;
+}
+.primary-btn::after {
+  content: "";
+  background-image: url(/images/next-arrow.png);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  margin-left: 8px;
+  width: 16px; 
+  height: 16px; 
+  position: absolute;
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  transition: transform 0.3s;
+}
+
+.primary-btn:hover::after {
+  transform: translateY(-50%) translateX(4px); 
+}
+.image-arrow img {
+  width: 220px;
+}
+.image-down-arrow{
+  rotate: 180deg;
+
+}
+
+.image-left-arrow img {
+  width: 220px;
+  rotate: 180deg;
+}
+
+.steps-grid {
+  position: relative;
+  margin-bottom: 40px; /* Adjust spacing as needed */
+}
+
+.steps-grid::after {
+  /* content: ''; */
+  position: absolute;
+  bottom: 41%;
+  right: 13%;
+  transform: translateX(-50%);
+  background-image: url('images/arrows.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  rotate: 90deg;
+}
+
+.content-section h2 {
+  font-size: 26px;
+  color: #f47d02;
+  margin-bottom:2rem;
+}
+#how-it-works h2{
+  font-size: 26px;
+  color: #f47d02;
+  margin-bottom:2rem;
 }

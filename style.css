@@ -407,6 +407,7 @@ body {
 .pricing {
   display: flex;
   justify-content: space-between;
+  
   width: 100%; 
 }
 
@@ -501,11 +502,11 @@ section#about {
   font-size: 16px;
   padding: 10px 40px 10px 10px;
   background-color: transparent;
-  color: blueviolet;
+  color: #f47d02;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: 1px solid blueviolet;
+  border: 1px solid #f47d02;
 }
 .primary-btn::after {
   content: "";
@@ -543,23 +544,6 @@ section#about {
   position: relative;
   margin-bottom: 40px; /* Adjust spacing as needed */
 }
-
-.steps-grid::after {
-  /* content: ''; */
-  position: absolute;
-  bottom: 41%;
-  right: 13%;
-  transform: translateX(-50%);
-  background-image: url('images/arrows.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  rotate: 90deg;
-}
-/* .margin-card{
-  margin-top: 150px;
-} */
 .content-section h2 {
   font-size: 26px;
   color: #f47d02;
@@ -568,5 +552,67 @@ section#about {
 #how-it-works h2{
   font-size: 26px;
   color: #f47d02;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;;
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(45deg, rgb(239 232 232), rgb(238 110 19));
+}
+
+.right-section img {
+width:400px;
+height: auto;
+}
+.left-section h1 {
+color: #f47d02;
+margin-bottom: 10px;
+}
+
+.left-section p {
+color: #000;
+margin-bottom: 20px;
+line-height: 1.5;
+} 
+
+.left-section button {
+  font-size: 16px;
+  background-color: transparent;
+  color: #f47d02;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid #f47d02;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.left-section button:hover {
+background-color: transparent;
+color: black;
+} 
+#animated-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between words */
+}
+
+.word {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: forwards 0.5s forwards;
+}
+
+@keyframes forwards {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

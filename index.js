@@ -30,12 +30,16 @@ function animateCounter(element, targetValue, duration) {
     observer.observe(content);
   });
 
-  paypal
-  .HostedButtons({
-    hostedButtonId: "9NMX2XWW9SN6J",
-    onApprove: function (data, actions) {
-      // Redirect to the success page after approval
-      window.location.href = "success.html";
-    },
-  })
-  .render("#paypal-container-9NMX2XWW9SN6J");
+  const heading = document.getElementById("animated-heading");
+const text = heading.textContent;
+heading.innerHTML = ""; 
+
+const words = text.split(" ");
+
+words.forEach((word, index) => {
+  const span = document.createElement("span");
+  span.textContent = word;
+  span.className = "word";
+  span.style.animationDelay = `${index * 0.3}s`; // Stagger animation for each word
+  heading.appendChild(span);
+});

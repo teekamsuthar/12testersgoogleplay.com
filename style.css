@@ -333,7 +333,9 @@ body {
   font-size: 14px;
   line-height: 1.6;
 }
-
+.about-us{
+  margin-top:23px;
+}
 .quick-links ul {
   list-style: none;
   padding: 0;
@@ -426,9 +428,7 @@ body {
   display: none !important;
 
 }
-#price-label{
-  display: none !important;
-}
+
 
 .counter {
   display: flex;
@@ -565,9 +565,11 @@ section#about {
 width:400px;
 height: auto;
 }
-.left-section h1 {
+.animated-heading {
 color: #f47d02;
 margin-bottom: 10px;
+font-size: 26px;
+font-weight: bold;
 }
 
 .left-section p {

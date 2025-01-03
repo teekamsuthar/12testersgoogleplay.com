@@ -30,16 +30,34 @@ function animateCounter(element, targetValue, duration) {
     observer.observe(content);
   });
 
-  const heading = document.getElementById("animated-heading");
-const text = heading.textContent;
-heading.innerHTML = ""; 
+  const animatedText = document.getElementById("animated-text");
+const words = ["Games", "Apps"];
+let wordIndex = 0;
+let letterIndex = 0; 
+function typeEffect() {
+  if (wordIndex < words.length) {
+    const currentWord = words[wordIndex];
 
-const words = text.split(" ");
+    if (letterIndex < currentWord.length) {
+      animatedText.textContent += currentWord[letterIndex]; 
+      letterIndex++; 
+      setTimeout(typeEffect, 150); 
+    } else {
+      setTimeout(() => {
+        animatedText.textContent = ""; 
+        letterIndex = 0; 
+        wordIndex++; 
+        if (wordIndex >= words.length) {
+          wordIndex = 0; 
+        }
+        setTimeout(typeEffect, 500);
+      }, 1000); 
+    }
+  }
+}
 
-words.forEach((word, index) => {
-  const span = document.createElement("span");
-  span.textContent = word;
-  span.className = "word";
-  span.style.animationDelay = `${index * 0.3}s`; // Stagger animation for each word
-  heading.appendChild(span);
+typeEffect();
+//scrool animation 
+document.getElementById('learn-more-btn').addEventListener('click', function () {
+  document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
 });

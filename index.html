@@ -26,13 +26,19 @@
     <body>
       <nav class="nav">
         <div class="logo"><a href="/index.html">TestersHub</a></div>
-        <ul class="nav-links">
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#how-it-works">Steps</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#pricing">Get Started</a></li>
         </ul>
       </nav>
+      
 
       <section class="">
             <div class="banner-container container">
@@ -95,11 +101,12 @@
       <div class="steps-container ">
         <!-- Step 1 -->
         <div class="step">
-          <div class=" t-cell t-valign_top" style="padding-bottom:40px; text-align: end;">
+          <div class=" t-cell t-valign_top t-end" style="padding-bottom:40px; ">
             <div class="t550__title t-name t-name_lg" field="li_title__5022115272071">Setting up the testers</div> 
             <div class="t550__descr t-text t-text_xs" field="li_descr__5022115272071">We’ll ask for tester-level access to your Google Play Console. This ensures everything’s set up and ready to go, so we can add our testers and start the process right away.
             </div>
-          </div>      <div class="t550__numberwrapper t-cell t-valign_top" style="padding-bottom:55px;"> 
+          </div>    
+            <div class="t550__numberwrapper t-cell t-valign_top d-none" style="padding-bottom:55px;"> 
             <div class="t550__number"> 
               <div class="t550__circle" style=" border-width: 2px; "></div> 
             <div class="t550__digit t-name t-name_md">1</div> 
@@ -126,7 +133,7 @@
           </div>
         <!-- Step 3 -->
         <div class="step">
-          <div class=" t-cell t-valign_top" style="padding-bottom:40px;text-align: end;">
+          <div class=" t-cell t-valign_top t-end" style="padding-bottom:40px;">
             <div class="t550__title t-name t-name_lg" field="li_title__5022115272071">14 Days of Testing</div> 
             <div class="t550__descr t-text t-text_xs" field="li_descr__5022115272071">Over 14 days, we’ll test your app daily, ensuring it meets Google’s guidelines for production readiness. During this time, you’ll need to release at least two updates—with or without any changes—essential for approval.
             </div>
@@ -221,6 +228,42 @@
               </p>
             </div>
            
+          </div>
+        </div>
+      </section>
+
+
+      <!-- faq section -->
+      <section id="faq" class="faq-container container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <h3 class="faq-question">What is the purpose of this app?</h3>
+            <p class="faq-answer">
+              This app is designed to help developers test their apps for compliance with Google’s guidelines and streamline the production process.
+            </p>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <h3 class="faq-question">How long does testing take?</h3>
+            <p class="faq-answer">
+              Testing typically takes 14 days, followed by 2-5 days for Google’s review before production access is granted.
+            </p>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <h3 class="faq-question">What is closed testing?</h3>
+            <p class="faq-answer">
+              Closed testing involves using a select group of testers to ensure that your app is stable and meets all necessary requirements.
+            </p>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <h3 class="faq-question">What do I need to provide for testing?</h3>
+            <p class="faq-answer">
+              You’ll need to provide tester-level access to your Google Play Console and release at least two updates during the testing period.
+            </p>
           </div>
         </div>
       </section>

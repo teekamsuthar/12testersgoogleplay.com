@@ -6,9 +6,6 @@ body {
   color: #333;
   background: #f9f9f9;
 }
-.testimonials.container {
-    padding: 30px 100px;
-}
 
 /* NAV */
 /* Base Navbar Styles */
@@ -34,7 +31,7 @@ body {
 }
 
 .logo a {
-  color: #f57c00;
+  color: #2f80ed;
   font-weight: 800;
   font-size: 1.5rem;
   text-decoration: none;
@@ -65,7 +62,7 @@ body {
 
 .nav-links a:hover {
   background: rgba(245, 124, 0, 0.1);
-  color: #f57c00;
+  color: #2f80ed;
 }
 
 /* Mobile Menu Toggle Styles */
@@ -158,7 +155,7 @@ body {
 }
 
 .btn {
-  background: linear-gradient(90deg, #f57c00, #ff9800);
+  background: linear-gradient(90deg, #2f80ed, #ff9800);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -170,7 +167,7 @@ body {
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #ff9800, #f57c00);
+  background: linear-gradient(90deg, #ff9800, #2f80ed);
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -273,7 +270,7 @@ body {
 .testimonials h2 {
   margin-bottom: 2rem;
   font-size: 26px;
-  color: #f47d02;
+  color: #2f80ed;
   text-align: center;
 }
 
@@ -320,7 +317,7 @@ body {
 .testimonial-info img:hover {
   transform: scale(1.1); /* Slightly enlarges the image */
   transition: transform 0.3s ease; /* Smooth transition */
-  border-color: #f57c00; /* Highlights the border on hover */
+  border-color: #2f80ed; /* Highlights the border on hover */
 }
 
 .testimonial-info img {
@@ -334,7 +331,7 @@ body {
 
 .testimonial-info strong {
   font-size: 1rem;
-  color: #f47d02;
+  color: #2f80ed;
 }
 
 .testimonial-info span {
@@ -403,7 +400,7 @@ body {
 }
 
 .quick-links ul li a:hover {
-  color: #f47d02; /* Teal-300 */
+  color: #2f80ed; /* Teal-300 */
 }
 
 .contact ul {
@@ -437,7 +434,7 @@ body {
 }
 
 .footer-links a:hover {
-  color: #f47d02; /* Teal-300 */
+  color: #2f80ed; /* Teal-300 */
 }
 
 @media (min-width: 768px) {
@@ -465,7 +462,7 @@ body {
 .pricing h2 {
   margin-bottom: 2rem;
   font-size: 26px;
-  color: #f47d02;
+  color: #2f80ed;
   margin-top: 0;
 }
 .paypal-left-content {
@@ -549,11 +546,11 @@ section#about {
   font-size: 16px;
   padding: 10px 40px 10px 10px;
   background-color: transparent;
-  color: #f47d02;
+  color: #2f80ed;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: 1px solid #f47d02;
+  border: 1px solid #2f80ed;
 }
 .primary-btn::after {
   content: "";
@@ -593,12 +590,12 @@ section#about {
 }
 .content-section h2 {
   font-size: 26px;
-  color: #f47d02;
+  color: #2f80ed;
   margin-bottom:2rem;
 }
 #how-it-works h2{
   font-size: 26px;
-  color: #f47d02;
+  color: #2f80ed;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -613,7 +610,7 @@ width:400px;
 height: auto;
 }
 .animated-heading {
-color: #f47d02;
+color: #2f80ed;
 margin-bottom: 10px;
 font-size: 26px;
 font-weight: bold;
@@ -629,11 +626,11 @@ padding: 10px 120px 0 0 ;
 .left-section button {
   font-size: 16px;
   background-color: transparent;
-  color: #f47d02;
+  color: #2f80ed;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: 1px solid #f47d02;
+  border: 1px solid #2f80ed;
 padding: 10px 20px;
 border-radius: 5px;
 cursor: pointer;
@@ -647,7 +644,7 @@ color: black;
 #animated-text {
   font-size: 1.7rem;
   font-weight: bold;
-  color: #f47d02;
+  color: #2f80ed;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #ff7e5f;
@@ -715,14 +712,14 @@ color: black;
 .t550__circle {
   width: 44px;
   height: 44px;
-  background: #f37c03;
+  background: #2f80ed;
   border-radius: 100%;
   border: 2px solid #fff;
 }.t550__digit {
   position: absolute;
   top: 50%;
   left: 0;
-  right: 0;
+  right: 1px;
   text-align: center;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -813,13 +810,16 @@ color: black;
 .t-end{
   text-align: end;
 }
+.t-start {
+  text-align: start;
+}
 /* faq section */
 
 
 .faq-container h2 {
   text-align: center;
   font-size: 26px;
-  color: #f47d02;
+  color: #2f80ed;
   margin-bottom: 20px;
 }
 
@@ -849,8 +849,25 @@ color: black;
   color: #555;
   line-height: 1.6;
 }
-
-
+.css-to8mgr {
+  margin: 2rem 0;
+  width: auto;
+}
+/* min-1000 */
+@media (min-width:1000px) {
+  .container {
+    padding: 60px 100px;
+}
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+}
+/* max-768 */
 @media (max-width: 768px) {
   .container{
     padding: 40px 30px;
@@ -874,11 +891,7 @@ color: black;
     background: #fff;
     flex-direction: column;
 }
-section#about {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
+
 .counter-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -909,14 +922,32 @@ section#about {
   margin: 0 auto;
   padding: 20px;
 }
+section#about {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
+}
+/* min-768 */
 @media (min-width: 768px) {
 section#about {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
+.container {
+  padding: 60px 50px;
+}
+}
+/* max-500 */
 @media(max-width:500px){
   .counter-section {
     display: grid;
@@ -925,5 +956,38 @@ section#about {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+.steps-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 0;
+}
+#how-it-works h2 {
+  font-size: 26px;
+  color: #2f80ed;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+.t-end {
+  text-align: center;
+}
+.t-start{
+  text-align: center;
+}
+.paypal-left-content {
+  padding: 0;
+  max-width: 700px;
+}
+
+}
+/* max-400 */
+@media(max-width:400px){
+  .faq-item {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
 }
 }

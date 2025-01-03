@@ -990,4 +990,7 @@ section#about {
     border-radius: 0;
     box-shadow: none;
 }
+  .right-section img{
+  width:260px;
+}
 }

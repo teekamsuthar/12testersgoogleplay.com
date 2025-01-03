@@ -61,3 +61,7 @@ typeEffect();
 document.getElementById('learn-more-btn').addEventListener('click', function () {
   document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
 });
+//navbar
+document.getElementById("nav-toggle").addEventListener("click", function() {
+  document.getElementById("nav-links").classList.toggle("active");
+});

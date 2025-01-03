@@ -851,7 +851,7 @@ color: black;
 }
 .css-to8mgr {
   margin: 2rem 0;
-  width: auto;
+  width: auto !important;
 }
 /* min-1000 */
 @media (min-width:1000px) {

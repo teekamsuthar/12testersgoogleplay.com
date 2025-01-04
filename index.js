@@ -30,37 +30,40 @@ function animateCounter(element, targetValue, duration) {
     observer.observe(content);
   });
 
-  const animatedText = document.getElementById("animated-text");
+const animatedText = document.getElementById("animated-text");
 const words = ["Games", "Apps"];
-let wordIndex = 0;
+let wordIndex = 0; 
 let letterIndex = 0; 
-function typeEffect() {
-  if (wordIndex < words.length) {
-    const currentWord = words[wordIndex];
+let isDeleting = false; 
 
-    if (letterIndex < currentWord.length) {
-      animatedText.textContent += currentWord[letterIndex]; 
-      letterIndex++; 
-      setTimeout(typeEffect, 150); 
-    } else {
-      setTimeout(() => {
-        animatedText.textContent = ""; 
-        letterIndex = 0; 
-        wordIndex++; 
-        if (wordIndex >= words.length) {
-          wordIndex = 0; 
-        }
-        setTimeout(typeEffect, 500);
-      }, 1000); 
-    }
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting && letterIndex <= currentWord.length) {
+    animatedText.textContent = currentWord.slice(0, letterIndex); 
+    letterIndex++; 
+    setTimeout(typeEffect, 150); 
+  } else if (isDeleting && letterIndex > 0) {
+    animatedText.textContent = currentWord.slice(0, letterIndex); 
+    letterIndex--; 
+    setTimeout(typeEffect, 150); 
+  } else {
+    isDeleting = !isDeleting;
+
+    if (!isDeleting) {
+      wordIndex = (wordIndex + 1) % words.length; 
+     }
+
+    setTimeout(typeEffect, 500); 
   }
 }
-
+typeEffect();
 typeEffect();
 //scrool animation 
 document.getElementById('learn-more-btn').addEventListener('click', function () {
   document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
 });
+
 //navbar
 document.getElementById("nav-toggle").addEventListener("click", function() {
   document.getElementById("nav-links").classList.toggle("active");

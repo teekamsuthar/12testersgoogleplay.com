@@ -849,7 +849,7 @@ color: black;
   width: auto !important;
 }
 /* min-1000 */
-@media (min-width:1000px) {
+@media (min-width:1025px) {
   .container {
     padding: 60px 100px !important;
 }

@@ -647,27 +647,22 @@ color: black;
   color: #2f80ed;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #ff7e5f;
-  animation: typing 3s steps(20, end), blink 0.5s step-end infinite alternate;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.cursor {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #2f80ed; /* Match text color */
+  animation: blink 0.6s step-end infinite; /* Blinking animation for the cursor */
 }
 
 @keyframes blink {
-  from {
-    border-color: transparent;
-  }
-  to {
-    border-color: #ff7e5f;
+  50% {
+    opacity: 0; /* Makes the cursor disappear for blinking effect */
   }
 }
+
 
 
 /* How It Works
@@ -856,7 +851,7 @@ color: black;
 /* min-1000 */
 @media (min-width:1000px) {
   .container {
-    padding: 60px 100px;
+    padding: 60px 100px !important;
 }
 .counter-section {
   display: grid;
@@ -927,6 +922,33 @@ section#about {
   justify-content: space-between;
   flex-direction: column;
 }
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.steps-container {
+display: flex;
+align-items: center;
+padding: 20px;
+flex-direction: column;
+gap: 0;
+}
+#how-it-works h2 {
+font-size: 26px;
+color: #2f80ed;
+margin-bottom: 0rem;
+text-align: center;
+}
+.t-end {
+text-align: center;
+}
+.t-start{
+text-align: center;
+}
 }
 /* min-768 */
 @media (min-width: 768px) {
@@ -990,7 +1012,7 @@ section#about {
     border-radius: 0;
     box-shadow: none;
 }
-  .right-section img{
+.right-section img{
   width:260px;
 }
 }

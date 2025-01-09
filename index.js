@@ -68,3 +68,43 @@ document.getElementById('learn-more-btn').addEventListener('click', function () 
 document.getElementById("nav-toggle").addEventListener("click", function() {
   document.getElementById("nav-links").classList.toggle("active");
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // Ensure the first item is always open
+  const firstItem = faqItems[0];
+  const firstAnswer = firstItem.querySelector(".faq-answer");
+  firstItem.classList.add("open");
+  firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+
+  faqItems.forEach((item, index) => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    question.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      // Close all FAQ items except the one being clicked
+      faqItems.forEach((faq, i) => {
+        if (i !== index) {
+          const answer = faq.querySelector(".faq-answer");
+          faq.classList.remove("open");
+          answer.style.maxHeight = null; // Reset height
+        }
+      });
+
+      // Toggle the current FAQ item
+      if (isOpen) {
+        item.classList.remove("open");
+        answer.style.maxHeight = null; // Reset height if it's already open
+      } else {
+        item.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px"; // Set height dynamically
+      }
+    });
+  });
+});
+
+
+
+

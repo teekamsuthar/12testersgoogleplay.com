@@ -64,6 +64,19 @@ document.getElementById('learn-more-btn').addEventListener('click', function () 
   document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.getElementById('steps').addEventListener('click', function () {
+  document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+document.getElementById('get-started').addEventListener('click', function () {
+  document.getElementById("pricing").scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('about-us').addEventListener('click', function () {
+  document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+});
+
 //navbar
 document.getElementById("nav-toggle").addEventListener("click", function() {
   document.getElementById("nav-links").classList.toggle("active");
@@ -104,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 

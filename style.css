@@ -30,12 +30,16 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo a {
-  color: #2f80ed;
+.logo  {
+ 
   font-weight: 800;
   font-size: 1.5rem;
+  
+}
+.logo a{
   text-decoration: none;
   cursor: pointer;
+  color: #2f80ed; 
 }
 
 .nav-links {
@@ -328,6 +332,12 @@ body {
 .footer {
   background-color: #1e293b; /* Slate-900 */
   color: #cbd5e1; /* Slate-300 */
+}
+.footer .about-us p {
+  color: #f0f0f0;
+}
+.footer .footer-bottom p{
+  color: #f0f0f0;
 }
 
 

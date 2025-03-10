@@ -69,26 +69,34 @@ p {
   margin-bottom: 15px;
 }
 
+
+
+/* White Blur Line Effect */
 /* Button Styling */
+
+
+.btn {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+
 .btn {
-  margin: 10px auto;
-  padding: 15px 45px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 8px;
-  display: inline-block;
-  background: linear-gradient(90deg, #26a0da 0%, #314755 100%);
-  color: white;
-  text-decoration: none;
-  transition: 0.4s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+margin: 10px;
+padding: 15px 45px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+box-shadow: 0 0 20px #eee;
+border-radius: 10px;
+display: block;
+text-decoration: none;
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #314755 0%, #26a0da 100%);
-  transform: translateY(-2px);
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
 }
+         
 
 /* Support Section */
 .container-text {
@@ -197,23 +205,31 @@ p {
 }
 
 /* Button Styling */
+
+
+.btn-submit {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+
 .btn-submit {
-  background: linear-gradient(90deg, #26a0da 0%, #314755 100%);
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
+margin: 10px;
+padding: 15px 45px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+box-shadow: 0 0 20px #eee;
+border-radius: 10px;
+display: block;
+text-decoration: none;
+border: none;
 }
 
 .btn-submit:hover {
-  background: linear-gradient(90deg, #314755 0%, #26a0da 100%);
-  transform: translateY(-2px);
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
 }
+
 .video-container iframe {
     height: 350px;
 }
@@ -389,8 +405,3 @@ p {
     
     </script>
     </html>
-
-
-
-
-

@@ -10,29 +10,23 @@ body {
 /* NAV */
 /* Base Navbar Styles */
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
-
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav.nav-bg {
   width: 100%;
-  background: linear-gradient(160deg, #fdfdfd 60%, #3665d8 145%);
+  position: fixed;
+  z-index: 1000;
 }
 .logo a {
   color: #2f80ed;

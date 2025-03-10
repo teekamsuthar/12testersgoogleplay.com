@@ -30,7 +30,10 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+nav.nav-bg {
+  width: 100%;
+  background: linear-gradient(160deg, #fdfdfd 60%, #3665d8 145%);
+}
 .logo a {
   color: #2f80ed;
   font-weight: 800;
@@ -837,7 +840,7 @@ padding: 10px 120px 0 0 ;
   grid-template-columns: 1fr 50px 1fr;
   gap: 20px;
   align-items: center;
-  padding: 20px;
+  padding:0 80px;
 }
 
 .step-text {

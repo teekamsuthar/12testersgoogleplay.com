@@ -28,12 +28,13 @@ body {
 
 /* Success Message Container */
 .container-s {
-  background-color: #eef2f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 50px 20px;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 50px 20px;
+    margin-top: 40px;
 }
 
 .success {
@@ -120,7 +121,13 @@ text-decoration: none;
 .video-container iframe {
   border-radius: 10px;
 }
-
+.form-group input, .form-group textarea {
+    width: 94% !important;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .support-text {
@@ -129,17 +136,18 @@ text-decoration: none;
 
   .container-s {
     padding: 20px;
-  }
-
+    margin-top: 0;
+}
   .success {
     margin: 50px auto;
     padding: 30px;
   }
 
   .btn {
-    width: 100%;
+    width: auto;
     padding: 12px;
   }
+ 
 }
 
 /* form */
@@ -241,7 +249,7 @@ text-decoration: none;
   }
 
   .btn-submit {
-    width: 100%;
+    width: auto;
   }
   .container-text {
     margin: 18px;
@@ -251,6 +259,14 @@ text-decoration: none;
     height: 250px;
 }
 }
+@media (max-width: 1024px) {
+  .container-text {
+    margin: 40px;
+    max-width: 1200px;
+}
+  }
+
+
 
  
 
@@ -258,22 +274,23 @@ text-decoration: none;
     </head>
     
     <body>
-     <nav class="nav-bg">
-          <div class="nav">
-          <div class="logo"><a href="/index.html">TestersHub</a></div>
-          <div class="nav-toggle" id="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul class="nav-links" id="nav-links">
-            <li><a id="steps" >Steps</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a id="about-us">About Us</a></li>
-            <li><a id="get-started">Get Started</a></li>
-          </ul>
-      </div>
-       </nav>
+      <nav class="nav-bg" style="background: #f1f5f9;
+">
+        <div class="nav">
+        <div class="logo"><a href="/index.html">TestersHub</a></div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a id="steps" >Steps</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a id="about-us">About Us</a></li>
+          <li><a id="get-started">Get Started</a></li>
+        </ul>
+    </div>
+     </nav>
       
 
       <section class="container-s">

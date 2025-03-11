@@ -27,6 +27,7 @@ nav.nav-bg {
   width: 100%;
   position: fixed;
   z-index: 1000;
+  top: 0;
 }
 .logo a {
   color: #2f80ed;
@@ -1150,6 +1151,12 @@ padding: 10px 120px 0 0 ;
     justify-content: space-evenly;
     background: linear-gradient(rgb(255, 255, 255), rgb(121 169 244), rgb(255, 255, 255));
     flex-direction: column;
+}
+nav.nav-bg {
+  width: 100%;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
 }
 
 .counter-section {
